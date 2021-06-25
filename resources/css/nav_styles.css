@@ -1,7 +1,7 @@
 .global_nav{
     left: 0;
     top: 0;
-    width: 100vw;
+    width: 100%;
     height: 52px;
     z-index: 100;
     position: fixed;
@@ -10,7 +10,7 @@
 
 .nav_container{
     height: inherit;
-    width: inherit;
+    /* width: inherit; */
     margin-left: 15px;
     margin-right: 15px;
     overflow: hidden;
@@ -42,10 +42,22 @@
     align-items: center;
     justify-content: center;
     float: left;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 10px;
+    /* margin-right: 5px; */
 }
-#search-btn, #home-btn, #network-btn, #cv-btn{
+
+.nav-cntnr-btn-div{
+    height: inherit;
+    width: 52px;
+    display: flex; /* flex */
+    align-items: center;
+    justify-content: center;
+    float: right;
+    margin-left: 10px;
+    /* margin-right: 5px; */
+}
+
+#search-btn, #home-btn, #network-btn, #cv-btn, #apps-btn{
     font-size: 18pt;
     background-color: transparent;
     color: rgb(92, 91, 91);
@@ -55,7 +67,7 @@
     border-radius: 20%;
 }
 
-#search-btn:hover,  #home-btn:hover, #network-btn:hover, #cv-btn:hover{
+#search-btn:hover,  #home-btn:hover, #network-btn:hover, #cv-btn:hover, #apps-btn:hover{
     color: rgb(0, 0, 0);
     font-size: 20pt;
     border: none;
@@ -77,8 +89,8 @@
     height: 30px;
     display: flex;
     margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
     align-items: center;
     border-color: transparent;
     border-radius: 5px;
@@ -134,5 +146,5 @@
     display: flex; /* flex */
     align-items: center;
     justify-content: center;
-    float: left;
+    float: right;
 }
