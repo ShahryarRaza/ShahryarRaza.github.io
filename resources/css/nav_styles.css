@@ -26,13 +26,17 @@
 }
 
 #github-logo{
-    font-size:38pt;
-    color: black;
+    content:url("../../resources/favicon/nav_logo_normal.png");
+    margin-top: 4px;
+    height: 40px;
+    width: auto;
 }
 
 #github-logo:hover{
-    color:rgb(92, 91, 91);
-    transition: 0.3s;
+    content:url("../../resources/favicon/nav_logo_down.png");
+    margin-top: 4px;
+    height: 40px;
+    width: auto;
 }
 
 .nav-btn-div{
