@@ -6,17 +6,27 @@ body{
 .main_container{
     margin-top: 52px;
     display: flex;
-    height: 500px;
+    height: 1500px;
     width: 100%;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 }
 
-p{
+.search_container{
+    margin-top: 52px;
+    /* display: flex; */
+    height: 1500px;
+    width: 100%;
+    text-align: center;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.construction{
     height: 200px;
     width: 400px;
     background-color: white;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     text-align: center;
