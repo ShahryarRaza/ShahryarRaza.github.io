@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Page Title -->
+    <title>Shahryar Raza | Home</title>
+
+    <!-- Page Icon -->
+    <link rel="icon" href="resources/favicon/favicon.ico" type="image/x-icon">
+
     <!-- FontAwesome Icon -->
     <script src="https://use.fontawesome.com/6ed5acc198.js"></script>
 
@@ -18,56 +24,51 @@
         }
     </style>
 
+    <!-- Cross-origin Support -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
+        crossorigin="anonymous">
+
     <!-- jQuery Google CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
-    <!-- Page Title -->
-    <title>Shahryar Raza</title>
-    
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" type="text/css" href="resources/css/core_styles.css"/>
-    <link rel="stylesheet" type="text/css" href="resources/css/nav_styles.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="resources/css/nav_styles.css"/> -->
 
     <!-- JS Script -->
-    <script src="resources/js/nav_scripts.js"></script>
+    <script src="resources/js/core_scripts.js"></script>
+    <!-- <script src="resources/js/nav_scripts.js"></script> -->
+
+    <script>
+        $(function(){
+            $(".nav_header").load("resources/nav/nav_header.html");
+        });
+    </script>
 </head>
 <body>
-    <div class="global_nav">
-        <div class="nav_container">
-            <div class="nav_logo">
-                <a href="https://github.com/ShahryarRaza/" title="Github ShahryarRaza/">
-                    <i id="github-logo" class="fa fa-github-square" aria-hidden="true" ></i>
-                </a>
-            </div>
-            <div class="nav-btn-div" id="search-icon">
-                <i id="search-btn" class="fa fa-search" aria-hidden="true" title="Search"></i>
-            </div>
-            <div id="search-box">
-                <div class="search-container" title="Search">
-                    <div class="search-box-prepend">
-                        <i class="fa fa-search" id="search-box-icon" aria-hidden="true"></i>
-                    </div>
-                    <input class="search-box-input" id="search-input" type="text" name="search" placeholder="Search in the site...">
-                </div>
-            </div>
-            <div class="nav_other">
-                <div class="nav-cntnr-btn-div" id="home-icon">
-                    <i id="home-btn" class="fa fa-home" aria-hidden="true" title="Home"></i>
-                </div>
-                <div class="nav-cntnr-btn-div" id="network-icon">
-                    <i id="network-btn" class="fa fa-users" aria-hidden="true" title="My Network"></i>
-                </div>
-                <div class="nav-cntnr-btn-div" id="cv-icon">
-                    <i id="cv-btn" class="fa fa-address-book" aria-hidden="true" title="Personal Info"></i>
-                </div>
-                <div class="nav-cntnr-btn-div" id="cv-apps">
-                    <i id="apps-btn" class="fa fa-th" aria-hidden="true" title="Apps"></i>
-                </div>
-            </div>
+    <!-- Navigation header -->
+    <div class="nav_header" data-value="home"></div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Home -->
+    <div class="main_container">
+        <div class="construction">
+            <h3>Home</h3><br>
+            <strong><p>This page is under construction</p></strong>
         </div>
     </div>
-    <div class="main_container">
-        <strong><p>This page is under construction</p></strong>
-    </div>
+    <!-- Footer -->
 </body>
 </html>
