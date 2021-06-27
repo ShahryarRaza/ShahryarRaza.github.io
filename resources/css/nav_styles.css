@@ -26,6 +26,7 @@
 }
 
 #github-logo{
+    display: block;
     content:url("../../resources/favicon/nav_logo_normal.png");
     margin-top: 4px;
     height: 40px;
@@ -34,6 +35,21 @@
 
 #github-logo:hover{
     content:url("../../resources/favicon/nav_logo_down.png");
+    margin-top: 4px;
+    height: 40px;
+    width: auto;
+}
+
+#back-icon{
+    display: none;
+    content:url("../../resources/favicon/nav_back_normal.png");
+    margin-top: 4px;
+    height: 40px;
+    width: auto;
+}
+
+#back-icon:hover{
+    content:url("../../resources/favicon/nav_back_down.png");
     margin-top: 4px;
     height: 40px;
     width: auto;
