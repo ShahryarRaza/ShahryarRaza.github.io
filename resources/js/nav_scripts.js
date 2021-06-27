@@ -3,7 +3,8 @@ $(document).ready(function(){
         $("#search-icon").css("display", "none");
         $(".nav_other").css("display", "none");
         $("#search-box").css("display", "block");
-        $("#search-input").val("");
+        $("#search-input").attr("placeholder", "Search in the site...");
+        // $("#search-input").val("");
         $("#search-input").focus();
     });
 
@@ -11,10 +12,10 @@ $(document).ready(function(){
         const keyCode = e.keyCode || e.which;
         const text = $("#search-input").val();
         if (keyCode === 13) {
-            if (text === "" || $.trim(text) === "" || text==="Empty field!") {
+            if (text === "" || $.trim(text) === "") {
                 $(".search-container").css("background-color", "rgb(255, 124, 124)");
                 $(".search-box-input").css("background-color", "rgb(255, 124, 124)");
-                $("#search-input").val("Empty field!");
+                $("#search-input").attr("placeholder", "Can\'t search without text. Type something...");
             }
             else{
                 location.replace("search.html?query="+text);
@@ -63,6 +64,22 @@ $(document).ready(function(){
         $("#search-box").css("display", "block");
         $("#search-input").val("");
 
+        // Change /Sr logo to back button
+        $("#github-logo").hover(() => {
+            $("#github-logo").css("content", "url('../../resources/favicon/nav_back_down.png')");
+        }, () => {
+            $("#github-logo").css("content", "url('../../resources/favicon/nav_back_normal.png')");
+        });
+
+        // Changing ref attribute to go back of the page
+        $("#github-ref").attr("href", "#");
+        $("#github-ref").attr("onclick", "location.href = document.referrer; return false;");
+        // $("#github-ref").attr("href", "javascript:history.back()");
+        $("#github-logo").attr("title", "Back");
+        document.querySelector('img[name="github-logo"]').src = "resources/favicon/nav_back_normal.png";
+        // $("github-logo").attr("this.src", "../../resources/favicon/nav_back_normal.png");
+        // document.getElementById("github-logo").src = "../../resources/favicon/nav_back_normal.png";
+
         // Get Search Query from querystring
         var query = GetParameterValues('query');
         function GetParameterValues(param) {
@@ -73,8 +90,7 @@ $(document).ready(function(){
                     return queryparam[1];
                 }
             }
-        }
-        ;
+        };
         $("#search-input").val(decodeURIComponent(query));
         $("#search-term").html("\"" + decodeURIComponent(query) + "\"");
     }
@@ -82,6 +98,12 @@ $(document).ready(function(){
         hideSearchOnMouseUp();
     }
 });
+
+// function changeSrcOnSearchPage(ctxt){
+//     if($(".nav_header").data("value") == "search"){
+//         ctxt.firstChild.src = "../../resources/favicon/nav_back_normal.png";
+//     }
+// }
 
 function homeHoverEffect(){
     $("#home-btn").hover(() => {
