@@ -59,26 +59,16 @@ $(document).ready(function(){
         networksHoverEffect();
     }
     if(nav_data == "search"){
-        $("#search-icon").css("display", "none");
-        $(".nav_other").css("display", "none");
-        $("#search-box").css("display", "block");
-        $("#search-input").val("");
+        $("#search-icon").css("display", "none"); // Disabling the Search icon
+        $(".nav_other").css("display", "none"); // Disabling the other navigation icons
+        $("#search-box").css("display", "block"); // Enabling Search input box
 
-        // Change /Sr logo to back button
-        $("#github-logo").hover(() => {
-            $("#github-logo").css("content", "url('../../resources/favicon/nav_back_down.png')");
-        }, () => {
-            $("#github-logo").css("content", "url('../../resources/favicon/nav_back_normal.png')");
-        });
+        $("#github-logo").css("display", "none"); // Disabling the /Sr logo img
+        $("#back-icon").css("display", "block"); // Enabling back btn img
 
         // Changing ref attribute to go back of the page
         $("#github-ref").attr("href", "#");
         $("#github-ref").attr("onclick", "location.href = document.referrer; return false;");
-        // $("#github-ref").attr("href", "javascript:history.back()");
-        $("#github-logo").attr("title", "Back");
-        document.querySelector('img[name="github-logo"]').src = "resources/favicon/nav_back_normal.png";
-        // $("github-logo").attr("this.src", "../../resources/favicon/nav_back_normal.png");
-        // document.getElementById("github-logo").src = "../../resources/favicon/nav_back_normal.png";
 
         // Get Search Query from querystring
         var query = GetParameterValues('query');
@@ -98,12 +88,6 @@ $(document).ready(function(){
         hideSearchOnMouseUp();
     }
 });
-
-// function changeSrcOnSearchPage(ctxt){
-//     if($(".nav_header").data("value") == "search"){
-//         ctxt.firstChild.src = "../../resources/favicon/nav_back_normal.png";
-//     }
-// }
 
 function homeHoverEffect(){
     $("#home-btn").hover(() => {
