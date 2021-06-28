@@ -6,6 +6,9 @@
     z-index: 100;
     position: fixed;
     background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%),
+                0 3px 1px -2px rgb(0 0 0 / 12%),
+                0 1px 5px 0 rgb(0 0 0 / 20%);
 }
 
 .nav_container{
@@ -27,14 +30,14 @@
 
 #github-logo{
     display: block;
-    content:url("../../resources/favicon/nav_logo_normal.png");
+    content:url("../../resources/favicon/nav_logo_normal.ico");
     margin-top: 4px;
     height: 40px;
     width: auto;
 }
 
 #github-logo:hover{
-    content:url("../../resources/favicon/nav_logo_down.png");
+    content:url("../../resources/favicon/nav_logo_down.ico");
     margin-top: 4px;
     height: 40px;
     width: auto;
@@ -42,14 +45,14 @@
 
 #back-icon{
     display: none;
-    content:url("../../resources/favicon/nav_back_normal.png");
+    content:url("../../resources/favicon/nav_back_normal.ico");
     margin-top: 4px;
     height: 40px;
     width: auto;
 }
 
 #back-icon:hover{
-    content:url("../../resources/favicon/nav_back_down.png");
+    content:url("../../resources/favicon/nav_back_down.ico");
     margin-top: 4px;
     height: 40px;
     width: auto;
