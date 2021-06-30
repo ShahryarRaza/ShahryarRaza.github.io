@@ -5,28 +5,53 @@ body{
 
 .main_container{
     margin-top: 52px;
-    /* display: flex; */
-    height: 1500px;
-    width: 100%;
-    position: absolute;
-    /* align-items: center; */
-    /* justify-content: center; */
 }
+
+/* Construction Notice Style */
 
 .construction{
     height: 200px;
     width: 400px;
     background-color: white;
-    /* display: flex; */
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: 8px;
     box-shadow: 0 2px 6px rgb(0 0 0 / 20%)
+}
+
+/* Footer Style */
+
+.footer{
+    background-color: black;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    padding: 15px;
+    margin-top: 5px;
+}
+
+.footer_flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_img{
+    height: 30px;
+    width: 30px;
+}
+
+.footer_name{
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /*/////////////////////////////////////////////
            Home page styles
 /////////////////////////////////////////////*/
+
+/* Welcome Board */
 
 .welcome-container{
     display: flow-root;
@@ -35,8 +60,7 @@ body{
 
 .welcome-pad{
     height: 109px;
-    /* width: inherit; */
-    margin: 8px;
+    margin: 8px 8px 0px 8px;
     padding: 15px 15px 8px 20px;
     border-radius: 10px;
     background-image: url("../../resources/img/welcome_bg.png");
@@ -72,19 +96,255 @@ body{
     font-size: 11pt;
 }
 
-.main_revisited{
-    display: flex;
-    height: 1000px;
-    width: 100%;
-    /* align-items: center; */
-    justify-content: center;
+/* Main Row */
+
+.main_row{
+    box-sizing: border-box;
 }
 
-/* MyNetworks page styles */
+/* Responsive Design */
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 4px;
+    width: -webkit-fill-available;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: -webkit-fill-available;
+}
+
+@media only screen and (min-width: 800px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    .main_content1{
+        padding: 0px 0px 0px 5px;
+    }
+}
+
+[class*="loc-"] {
+    float: left;
+    padding: 2px;
+    width: -webkit-fill-available;
+}
+
+@media only screen and (max-width: 800px) {
+    /* For desktop: */
+    .loc-1 {width: 8.33%;}
+    .loc-2 {width: 16.66%;}
+    .loc-3 {width: 25%;}
+    .loc-4 {width: 33.33%;}
+    .loc-5 {width: 41.66%;}
+    .loc-6 {width: 50%;}
+    .loc-7 {width: 58.33%;}
+    .loc-8 {width: 66.66%;}
+    .loc-9 {width: 75%;}
+    .loc-10 {width: 83.33%;}
+    .loc-11 {width: 91.66%;}
+    .loc-12 {width: 100%;}
+    .main_content1{
+        padding: 0px 5px 0px 5px;
+    }
+}
+
+/* Main Content */
+
+.main_content{
+    margin: 5px 0px 8px 5px;
+    border-style: solid;
+    border-color: silver;
+    border-width: 0.5px;
+    border-radius: 10px 10px 5px 5px;
+    box-shadow: 0 2px 3px -1px rgb(0 0 0 / 10%);
+}
+
+.profile_div{
+    width: 100%;
+    height: -webkit-fill-available;
+    border-radius: 10px 10px 5px 5px;
+    padding: 0px 0px 10px 0px;
+    background-color: #ffffff;
+}
+
+.profile_top_bg{
+    height: 125px;
+    width: 100%;
+    border-radius: 10px 10px 5px 5px;
+    background-image: url(../../resources/img/profile_bg.png);
+    background-size: contain;
+}
+
+.profile_pic{
+    height: 140px;
+    border-radius: 50%;
+    margin-top: 60px;
+    margin-left: 30px;
+    border: solid;
+    border-color: white;
+    border-width: 4px;
+}
+
+.profile_bottom_div{
+    width: 100%;
+    height: inherit;
+    margin-top: 78px;
+}
+
+.name_div{
+    padding: 0px 10px 0px 25px;
+}
+
+.name_txt{
+    margin: 0px;
+}
+
+.desg_txt{
+    margin: 0px;
+}
+
+.addr_txt{
+    margin: 0px;
+    color: rgb(48 47 47 / 82%);
+}
+
+/* Secondary Content */
+
+.secondary_content{
+    margin: 5px 0px 8px 5px;
+    border-style: solid;
+    border-color: silver;
+    border-width: 0.5px;
+    border-radius: 10px 10px 5px 5px;
+    letter-spacing: 0px;
+    box-shadow: 0 2px 3px -1px rgb(0 0 0 / 10%);
+}
+
+.about_div{
+    width: 100%;
+    height: -webkit-fill-available;
+    border-radius: 10px 10px 5px 5px;
+    background-color: #ffffff;
+    padding: 25px 0px 25px 25px;
+}
+
+.about_heading{
+    margin: 0px;
+    color: rgb(48 47 47 / 82%);
+}
+
+hr{
+    margin-bottom: 0px;
+    border: 0.5px solid rgb(48 47 47 / 18%);
+}
+
+.about_txt{
+    margin: 0px;
+    padding: 0px 10px 0px 0px;
+    white-space: pre-line;
+}
+
+/* Ternary Content */
+
+.ternary_content{
+    margin: 5px 0px 8px 5px;
+    border-style: solid;
+    border-color: silver;
+    border-width: 0.5px;
+    border-radius: 10px 10px 5px 5px;
+    box-shadow: 0 2px 3px -1px rgb(0 0 0 / 10%);
+}
+
+/* Side Contents */
+.side_content{
+    margin: 5px 5px 0px 0px;
+    border-style: solid;
+    border-color: silver;
+    border-width: 0.5px;
+    border-radius: 10px 10px 5px 5px;
+    box-shadow: 0 2px 3px -1px rgb(0 0 0 / 10%);
+}
+
+.follow_aside{
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px 10px 5px 5px;
+}
+
+.me_ico{
+    display: inline-block;
+    margin: 0px 2.5px 0px 0px;
+}
+
+.me_ico_pic{
+    height: 50px;
+    border-radius: 10px;
+}
+
+.app_ico{
+    display: inline-block;
+    margin: 0px 0px 0px 2.5px;
+}
+
+.app_ico_pic{
+    height: 50px;
+    border-radius: 10px;
+}
+
+.follow_div{
+    text-align: center;
+}
+
+.follow_txt{
+    margin: 5px 0px 8px 0px;
+}
+
+.follow_btn{
+    border-radius: 5px;
+    border: 2px solid;
+    border-color: black;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    outline: none;
+}
+
+.follow_btn:hover{
+    border-radius: 5px;
+    border: 2px solid;
+    border-color: black;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+/*/////////////////////////////////////////////
+           MyNetworks page styles
+/////////////////////////////////////////////*/
 
 
-
-/* Personal Info page styles */
+/*/////////////////////////////////////////////
+           PersonalInfo page styles
+/////////////////////////////////////////////*/
 
 
 /*/////////////////////////////////////////////
